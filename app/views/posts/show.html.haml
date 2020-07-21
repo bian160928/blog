@@ -2,6 +2,8 @@
   .header
     = link_to root_path, class: "title" do
       5$ Instrumental
+    = link_to "/posts/#{@post.id}", method: :delete, class: "post" do
+      delete
   .show
   .contents
     .content
