@@ -2,8 +2,15 @@
   .header
     = link_to root_path, class: "title" do
       5$ Instrumental
-    = link_to new_post_path, class: "post" do
-      new post
+    -if user_signed_in?
+      .user_nav.grid-6
+        = link_to "logOut", destroy_user_session_path, class: "post", method: :delete
+        = link_to new_post_path, class: "post" do
+          newPost
+    -else
+      .grid-6
+        = link_to "logIn", new_user_session_path, class: "post"
+        = link_to "signUp", new_user_registration_path, class: "post"
   .main
     - @posts.each do |post|
       .content
