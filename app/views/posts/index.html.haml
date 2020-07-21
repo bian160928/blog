@@ -1,0 +1,11 @@
+.wrapper
+  .header
+    = link_to root_path, class: "title" do
+      5$ Instrumental
+    = link_to new_post_path, class: "post" do
+      new post
+  .main
+    - @posts.each do |post|
+      .content
+        =image_tag post.image.url, class: "image" 
+        =link_to "click", post_path(post.id), method: :get

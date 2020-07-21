@@ -55,3 +55,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'pry-rails'
 gem 'haml-rails'
+gem 'font-awesome-sass'
+gem 'carrierwave'
+gem 'carrierwave-audio'
+gem 'audiojs-rails'
+gem 'mini_magick'

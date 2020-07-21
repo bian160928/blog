@@ -1,0 +1,20 @@
+.wrapper
+  .header
+    = link_to root_path, class: "title" do
+      5$ Instrumental
+  .new-post
+    %h1 ~New Post~
+    .new-box
+      = form_with model: @post, local: true do |f|
+        .message
+          = f.text_field :name, class: "text", placeholder: "your name"
+          = f.text_field :title, class: "text", placeholder: "chill/trap/old scool...etc"
+          .content-file
+            = f.label :music do
+              %i.fa.fa-file-audio
+              =f.file_field :music, class: "file"
+            = f.label :image do
+              %i.fa.fa-image
+              =f.file_field :image, class: "file"
+          = f.submit "Click To Post", class: "submit"
+          

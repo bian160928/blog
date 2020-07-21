@@ -1,0 +1,24 @@
+.wrapper
+  .header
+    = link_to root_path, class: "title" do
+      5$ Instrumental
+  .show
+  .contents
+    .content
+      %h3 Genre
+      %p= @post.title
+  .contents
+    .content
+      %h3 name
+      %p= @post.name
+  .contents
+    %p.music
+    =audio_tag @post.music, controls: true
+  .shopping
+    =link_to "#", class: "buy" do
+      BUY A BEAT
+  .info
+    %p.message
+      Therefore, it follows that only you can ever know you and only I can ever know I directly. Between your consciousness and mine, there exists a wide gap that cannot be bridged. We may work together, live together, come to love or hate each other. But our mind can never be understood entirely by other people. We must live our own lives, think our own thoughts, and arrive at our own destiny.
+
+      Then, what is mind? What is the thing that we call consciousness? The only way to know what mind is, is to look into our own consciousness and observe what is happening there. In the language of the psychologist, we must 
