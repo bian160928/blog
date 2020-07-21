@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :move_to_index, except: [:index, :show]
   def index
     @posts = Post.all.order("created_at DESC")
   end
@@ -25,5 +26,11 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:name, :title, :music, :image)
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
   end
 end
