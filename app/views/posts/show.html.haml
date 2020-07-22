@@ -14,10 +14,18 @@
     .content
       %h3 name
       %p= link_to @post.user.name, "/users/#{@post.user.id}", class: "user-name"
-      -# %p= @post.user.name
   .contents
     %p.music
     =audio_tag @post.music, controls: true
+  .contents
+    .hand-sign
+      goodCount : #{@post.likes.count}
+      - if current_user.already_liked?(@post)
+        = link_to  post_like_path(@post), method: :delete, class: "hand" do
+          %i.fas.fa-thumbs-down
+      - else
+        = link_to post_likes_path(@post), method: :post, class: "hand" do
+          %i.fas.fa-thumbs-up
   .shopping
     =link_to "#", class: "buy" do
       BUY A BEAT

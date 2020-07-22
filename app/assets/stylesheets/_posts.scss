@@ -78,14 +78,36 @@
         width: 180px;
         height: 180px;
         border: 2px solid black; 
+        cursor: pointer;
+        &:active {
+          position: relative;
+          top: 5px;
+          box-shadow: none;
+        }
       }
-      a {
+      .click {
         position: absolute;
-        top: 80px;
-        left: 35px;
         text-decoration: none;
         color: cornsilk;
         font-weight: bold;
+        letter-spacing: 5px;
+        background-color: rgba(35,35,35,0.6);
+        border-radius: 25px;
+        font-family: cursive;
+        padding: 2px;
+        top: 70px;
+        left: 5px;
+      }
+      .index-good {
+        position: absolute;
+        top: 130px;
+        left: 70px;
+        text-decoration: none;
+        color: cornsilk;
+        letter-spacing: normal;
+        background-color: rgba(35,35,35,0.6);
+        border-radius: 25px;
+        padding: 2px;
       }
     }
   }
