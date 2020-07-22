@@ -9,7 +9,13 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(post_params)
+    @post = Post.new(post_params)
+    @post.user_id = current_user.id
+    if @post.save
+      render :create
+    else
+      render :new
+    end
   end
 
   def show
