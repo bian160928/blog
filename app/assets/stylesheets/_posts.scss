@@ -6,9 +6,11 @@
   height: 100vh;
   width: 100%;
   background-color: white;
-  .header {
-    height: 200px;
-    text-align: center;
+  .header-top {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
     .post {
       text-decoration: none;
       color: black;
@@ -19,33 +21,52 @@
       font-size: 20px;
       letter-spacing: 10px;
       margin-left: 8px;
+      line-height: 90px;
+      &:active {
+        position: relative;
+        top: 4px;
+        box-shadow: none;
+      }
     }
+  }
+  .header {
+    height: 160px;
+    text-align: center;
     .title {
       text-decoration: none;
       font-size: 70px;
       color: black;
-      line-height: 200px;
+      line-height: 150px;
       font-family: cursive;
       letter-spacing: 10px;
       font-weight: bold;
     }
   }
-  // .main {
-  //   margin: 0 50px;
-  //   letter-spacing: 8px;
-  //   .content {
-  //     display: inline-block;
-  //     border: 2px solid black;
-  //     padding: 20px 20px;
-  //     border-radius: 50px;
-  //     margin-bottom: 20px;
-  //     a {
-  //       text-decoration: none;
-  //     }
-  //   }
-  // }
+  .search-form {
+    display: flex;
+    justify-content: center;
+    .search-input {
+      border: none;
+      background-color: whitesmoke;
+      padding: 10px;
+      border-radius: 25px;
+      text-align: center;
+    }
+    .search-btn {
+      border: 2px solid black;
+      font-weight: bold;
+      padding: 5px;
+      border-radius: 50px;
+      cursor: pointer;
+      &:active {
+        position: relative;
+        top: 4px;
+        box-shadow: none;
+      }
+    }
+  }
   .main {
-    margin: 100px 110px;
+    margin: 65px 110px;
     letter-spacing: 18px;
     .content {
       display: flex;

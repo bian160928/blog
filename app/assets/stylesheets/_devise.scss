@@ -1,0 +1,23 @@
+h2 {
+  height: 70px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+
+}
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.actions {
+  display: flex;
+  justify-content: center;
+}
+.submit-up {
+  padding: 5px 20px;
+  margin-top: 10px;
+  border-radius: 25px;
+}
