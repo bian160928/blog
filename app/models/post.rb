@@ -6,4 +6,5 @@ class Post < ApplicationRecord
   validates :title, presence: true
   validates :music, presence: true
   validates :image, presence: true
+  belongs_to :user
 end

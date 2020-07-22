@@ -13,6 +13,12 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    .new-name {
+      font-family: cursive;
+      font-size: 30px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
     .text {
       margin-bottom: 20px;
       padding: 10px 60px;
@@ -32,11 +38,18 @@
     .submit {
       padding: 15px 110px;
       background-color: black;
+      opacity: 0.8;
       color: green;
       margin-top: 20px;
       border-radius: 25px;
       font-family: sans-serif;
       margin-bottom: 50px;
+      cursor: pointer;
+      &:active {
+        position: relative;
+        top: 7px;
+        box-shadow: none;
+      }
     }
   }
 }
@@ -50,7 +63,11 @@
   }
   .return {
     text-decoration: none;
-    color: cornsilk;
+    color: yellowgreen;
+    font-weight: bold;
+    &:hover {
+      background-color: gray;
+    }
   }
 }
 
@@ -67,6 +84,20 @@
     font-size: 38px;
     font-weight: bold;
     font-family: cursive;
+    .user-name {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.6;
+        background-color: darkgreen;
+      }
+      &:active {
+        position: relative;
+        top: 8px;
+        box-shadow: none;
+      }
+    }
   }
 }
 .content {
