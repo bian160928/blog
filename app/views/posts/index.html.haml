@@ -1,29 +1,4 @@
-.wrapper
-  .header-top
-    -if user_signed_in?
-      .user_nav.grid-6
-        = link_to "logOut", destroy_user_session_path, class: "post", method: :delete
-        = link_to new_post_path, class: "post" do
-          newPost
-        = link_to "myRoom", "/users/#{current_user.id}", class: "post"
-    -else
-      .grid-6
-        = link_to "logIn", new_user_session_path, class: "post"
-        = link_to "signUp", new_user_registration_path, class: "post"
-  .header
-    = link_to root_path, class: "title" do
-      5$ Instrumental    
-  = form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form|
-    = form.text_field :keyword, placeholder: "findGenre", class: "search-input"
-    = form.submit "search", class: "search-btn"
-  .main
-    - @posts.each do |post|
-      .content
-        =link_to post_path(post.id), method: :get do
-          =image_tag post.image.url, class: "image" 
-        =link_to post.user.name, post_path(post.id), method: :get, class: "click"
-        =link_to post_path(post.id), method: :get, class: "index-good" do
-          %i.fas.fa-thumbs-up
-          = post.liked_users.count
+= render partial: "post", locals: { post: @post }
+
 
 
