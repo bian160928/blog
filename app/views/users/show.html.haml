@@ -1,12 +1,13 @@
 .wrapper
-  .header
-    = link_to root_path, class: "title" do
-      5$ Instrumental
+  .header-top
     -if user_signed_in?
       .user_nav.grid-6
         = link_to "logOut", destroy_user_session_path, class: "post", method: :delete
         = link_to new_post_path, class: "post" do
           newPost
+  .header
+    = link_to root_path, class: "title" do
+      5$ Instrumental
   .main
     - @posts.each do |post|
       .content
