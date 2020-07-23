@@ -1,16 +1,30 @@
+.container {
+  border: 1px solid black;
+  border-radius: 50px;
+  margin: 0 auto;
+  width: 350px;
+  background-color: rgba(220, 247, 47, 0.4);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 h2 {
   height: 70px;
   text-align: center;
   font-weight: bold;
   font-size: 32px;
-
+  letter-spacing: 5px;
+  font-family: monospace;
 }
 .field {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
   font-weight: bold;
+  flex-direction: column;
+  margin-bottom: 10px;
+  p {
+    text-align: center;
+  }
 }
 .actions {
   display: flex;
@@ -19,5 +33,11 @@ h2 {
 .submit-up {
   padding: 5px 20px;
   margin-top: 10px;
+  margin-bottom: 20px;
   border-radius: 25px;
+}
+.devise-info {
+  text-decoration: none;
+  color: gray;
+  font-size: 12px;
 }

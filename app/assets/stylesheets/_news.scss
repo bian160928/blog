@@ -73,18 +73,35 @@
 }
 
 .show {
-  border-bottom: 2px solid black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .image {
+    border-radius: 50%;
+    width: 570px;
+    height: 570px;
+    border: 2px solid black; 
+    opacity: 0.3;
+    position: absolute;
+    top:1px;
+  }
 }
 .contents {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-bottom: 2px solid black;
+  padding-top: 10px;
+  .content {
+    padding-top: 20px;
+  }
   p{
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     font-size: 38px;
     font-weight: bold;
     font-family: cursive;
+    z-index: 10;
+    margin-top: 20px;
     .user-name {
       color: black;
       text-decoration: none;
@@ -105,6 +122,7 @@
     font-size: 28px;
     font-weight: bold;
     font-family: cursive;
+    z-index: 10;
     .hand{
       color: green;
       font-size: 50px;
@@ -124,7 +142,7 @@
   }
 }
 .shopping {
-  margin: 70px;
+  margin: 140px 70px 40px 70px;
   text-align: center;
   .buy {
     text-decoration: none;
