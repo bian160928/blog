@@ -22,10 +22,10 @@
     %p.hand-sign
       goodCount : #{@post.likes.count}
       - if current_user.already_liked?(@post)
-        = link_to  post_like_path(@post), method: :delete, class: "hand" do
-          %i.fas.fa-thumbs-down
+        = link_to  post_like_path(@post), method: :delete, class: "hand", remote: true do
+          %i.fas.fa-thumbs-up
       - else
-        = link_to post_likes_path(@post), method: :post, class: "hand" do
+        = link_to post_likes_path(@post), method: :post, class: "hand-bad", remote: true do
           %i.fas.fa-thumbs-up
   .shopping
     =link_to "#", class: "buy" do
