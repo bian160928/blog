@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'posts#index'
   resources :posts, only: [:index, :new, :create, :show, :destroy] do
-    resources :likes, only: [:create, :destroy]
+    resources :likes, only: [:index, :create, :destroy]
       collection do
         get 'search'
       end
