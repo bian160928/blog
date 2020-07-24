@@ -82,7 +82,7 @@
     width: 570px;
     height: 570px;
     border: 2px solid black; 
-    opacity: 0.3;
+    opacity: 0.5;
     position: absolute;
     top:1px;
   }
@@ -106,9 +106,10 @@
       color: black;
       text-decoration: none;
       cursor: pointer;
+      transition: all  0.6s ease;
       &:hover {
-        opacity: 0.6;
-        background-color: darkgreen;
+        opacity: 0.8;
+        color: skyblue;
       }
       &:active {
         position: relative;
@@ -124,9 +125,29 @@
     font-family: cursive;
     z-index: 10;
     .hand{
-      color: green;
+      color: rgb(93, 181, 235);
+      opacity: 1;
       font-size: 50px;
       line-height: 70px;
+      text-decoration: none;
+      transition: all  0.6s ease;
+      &:active {
+        position: relative;
+        top: 6px;
+        box-shadow: none;
+      }
+    }
+    .hand-bad {
+      color: black;
+      opacity: 0.8;
+      font-size: 50px;
+      line-height: 70px;
+      text-decoration: none;
+      transition: all  0.8s ease;
+      &:hover {
+        color: skyblue;
+        opacity: 0.8;
+      }
       &:active {
         position: relative;
         top: 6px;
@@ -170,9 +191,16 @@
   color: black;
   font-size: 20px;
   font-weight: bold;
+  font-family: cursive;
   border: 2px solid black;
   border-radius: 25px;
-  padding: 3px;
+  margin-left: 25px;
+  padding: 1px;
+  transition: all  0.6s ease;
+  &:hover {
+    background-color: tomato;
+    opacity: 0.7;
+  }
   &:active {
     position: relative;
     top: 4px;
