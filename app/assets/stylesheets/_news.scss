@@ -1,13 +1,23 @@
+.new-wrapper {
+  background-image: url("train1.jpg");
+  background-size: cover;
+}
 .new-post {
-  border-top: dashed;
-  border-bottom: dashed;
+  margin: 0 auto;
+  width: 400px;
+  height: 450px;
+  background-color: rgba(252, 252, 252, 0.4);
+  border-radius: 25px;
+  margin-top: 100px;
+  padding: 25px;
   h1 {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
-    font-family: cursive;
+    font-family: sans-serif;
     margin-bottom: 15px;
     margin-top: 25px;
+    color: rgb(46, 46, 46);
   }
   .message {
     display: flex;
@@ -15,10 +25,11 @@
     flex-direction: column;
     align-items: center;
     .new-name {
-      font-family: cursive;
+      font-family: serif;
       font-size: 30px;
       margin-bottom: 10px;
       font-weight: bold;
+      color: rgb(50, 50, 50);
     }
     .text {
       margin-bottom: 20px;
@@ -32,20 +43,27 @@
       font-size: 50px;
       color: black;
       margin-left: 10px;
+      cursor: pointer;
     }
     .file {
       display: none;
     }
     .submit {
-      padding: 15px 110px;
-      background-color: black;
-      opacity: 0.8;
-      color: green;
+      padding: 15px 100px;
+      background-color: rgba(49, 97, 255, 0.3);
+      color: rgb(0, 102, 157);
+      font-weight: bold;
       margin-top: 20px;
-      border-radius: 25px;
+      border-radius: 15px;
+      border: none;
       font-family: sans-serif;
       margin-bottom: 50px;
       cursor: pointer;
+      transition: all  0.6s ease;
+      &:hover {
+        background-color: rgb(225, 207, 15);
+        color: whitesmoke;
+      }
       &:active {
         position: relative;
         top: 7px;
@@ -54,23 +72,7 @@
     }
   }
 }
-.success {
-  text-align: center;
-  h1 {
-    font-size: 40px;
-    font-weight: bold;
-    font-family: cursive;
-    margin-bottom: 30px;
-  }
-  .return {
-    text-decoration: none;
-    color: yellowgreen;
-    font-weight: bold;
-    &:hover {
-      background-color: gray;
-    }
-  }
-}
+
 
 .show {
   position: relative;
@@ -81,7 +83,7 @@
     border-radius: 50%;
     width: 570px;
     height: 570px;
-    border: 2px solid black; 
+    border: 2px solid rgb(23, 40, 53); 
     opacity: 0.5;
     position: absolute;
     top:1px;
@@ -99,17 +101,17 @@
     padding-bottom: 20px;
     font-size: 38px;
     font-weight: bold;
-    font-family: cursive;
+    font-family: serif;
     z-index: 10;
     margin-top: 20px;
     .user-name {
       color: black;
       text-decoration: none;
       cursor: pointer;
-      transition: all  0.6s ease;
+      transition: all  0.3s ease;
       &:hover {
         opacity: 0.8;
-        color: skyblue;
+        color: rgb(0, 73, 136);
       }
       &:active {
         position: relative;
@@ -122,10 +124,10 @@
     height: 80px;
     font-size: 28px;
     font-weight: bold;
-    font-family: cursive;
+    font-family: serif;
     z-index: 10;
     .hand{
-      color: rgb(93, 181, 235);
+      color: rgb(0, 95, 154);
       opacity: 1;
       font-size: 50px;
       line-height: 70px;
@@ -145,7 +147,7 @@
       text-decoration: none;
       transition: all  0.8s ease;
       &:hover {
-        color: skyblue;
+        color: rgb(0, 95, 154);
         opacity: 0.8;
       }
       &:active {
@@ -205,5 +207,51 @@
     position: relative;
     top: 4px;
     box-shadow: none;
+  }
+}
+.shows {
+  height: 50px;
+}
+.success {
+  text-align: center;
+  margin-top: 50px;
+  position: relative;
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-bottom: 15px;
+  }
+  .return {
+    text-decoration: none;
+    color: rgb(0, 78, 120);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    padding: 10px;
+    z-index: 10;
+    font-weight: bold;
+    font-size: 15px;
+    transition: all  0.6s ease;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.5);;
+      padding: 15px;
+      border-radius: 25px;
+    }
+  }
+  .return-d {
+    text-decoration: none;
+    color: rgb(0, 78, 120);
+    background-color: rgba(169, 169, 169, 0.5);
+    border-radius: 15px;
+    padding: 10px;
+    z-index: 10;
+    font-weight: bold;
+    font-size: 15px;
+    transition: all  0.6s ease;
+    &:hover {
+      background-color: rgba(169, 169, 169, 0.5);;
+      padding: 15px;
+      border-radius: 25px;
+    }
   }
 }

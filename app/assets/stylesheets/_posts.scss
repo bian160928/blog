@@ -19,9 +19,9 @@
       font-weight: bold;
       font-size: 15px;
       letter-spacing: 2px;
-      margin-left: 8px;
+      margin-left: 10px;
       line-height: 50px;
-      font-family: sans-serif;
+      font-family: serif;
       background-color: rgba(255, 255, 255, 0.845);
       transition: all  0.5s ease;
       &:hover {
@@ -80,7 +80,7 @@
     align-items: center;
     a {
       text-decoration: none;
-      font-size: 50px;
+      font-size: 60px;
       color: rgb(255, 255, 255);
       font-family: sans-serif;
       background-color: rgba(1, 86, 177, 0.3);
@@ -105,7 +105,7 @@
       position: relative;
       margin-bottom: 10px;
       .image {
-        border-radius: 50%;
+        border-radius: 25%;
         width: 280px;
         height: 280px;
         border: 3px solid rgb(3, 50, 99); 
@@ -129,7 +129,7 @@
         letter-spacing: 5px;
         background-color: rgba(35,35,35,0.6);
         border-radius: 25px;
-        font-family: cursive;
+        font-family: serif;
         padding: 10px;
         top: 115px;
         left: 13px;
@@ -155,27 +155,27 @@
     .title {
       text-decoration: none;
       color: black;
-      font-weight: bold;
-      font-family: sans-serif;
+      font-family: serif;
       font-size: 35px;
       display: block;
       text-align: center;
       line-height: 70px;
       transition: all  0.5s ease;
       &:hover {
-        color: rgba(0, 145, 255, 0.6);
+        background-color: rgba(5, 113, 196, 0.3);
+        border-radius: 15px;
       }
     }
   }
   .footer {
     height: 30px;
-    background-image: url("smork.jpeg");
+    background-image: url("bar.jpeg");
     position: absolute;
     width: 100%;
     bottom: 0;
     .footer-info {
       color: rgb(224, 231, 237);
-      font-family: cursive;
+      font-family: sans-serif;
       text-align: center;
     }
   }

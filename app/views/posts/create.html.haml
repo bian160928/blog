@@ -1,8 +1,37 @@
 .wrapper
   .header
     = link_to root_path, class: "title" do
-      Instrumental
+      韻strumental
+  .header-top
+    -if user_signed_in?
+      .user_nav.grid-6
+        = link_to "logOut", destroy_user_session_path, class: "post", method: :delete
+        = link_to new_post_path, class: "post" do
+          newPost
+        = link_to current_user.name, "/users/#{current_user.id}", class: "post"
+        = link_to post_likes_path(current_user.id), class: "post" do
+          %i.fas.fa-thumbs-up
+    = form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form|
+      = form.text_field :keyword, placeholder: "findGenre", class: "search-input", size: "15:15"
+      = button_tag type: 'submit', class: 'search-btn' do
+        %i.fas.fa-search
+  .shows
+  .show
+    =image_tag @post.image.url, class: "image" 
+  .contents
+    .content
+      %h3 name
+      %p= link_to @post.user.name, "/users/#{@post.user.id}", class: "user-name"
+  .contents
+    .content
+      %h3 Genre
+      %p= @post.title
+  .contents
+    %p.music
+    =audio_tag @post.music, controls: true, controlslist: "nodownload"
   .success
-    %h1 !congratulation!
+    %h1 Created your Post 
     = link_to root_path, class: "return" do
       Return To Top
+  
+    
