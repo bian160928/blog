@@ -9,8 +9,7 @@
     height: 50px;
     display: flex;
     justify-content: center;
-    background-image: url("smork.jpeg");
-    opacity: 0.9;
+    background-image: url("bar.jpeg");
     .post {
       text-decoration: none;
       color: black;
@@ -19,15 +18,14 @@
       padding: 6px;
       font-weight: bold;
       font-size: 15px;
-      letter-spacing: 5px;
+      letter-spacing: 2px;
       margin-left: 8px;
       line-height: 50px;
-      font-family: cursive;
+      font-family: sans-serif;
       background-color: rgba(255, 255, 255, 0.845);
-      transition: all  0.8s ease;
+      transition: all  0.5s ease;
       &:hover {
-        background-color: skyblue;
-        opacity: 0.7;
+        background-color: rgba(149, 208, 254, 0.6);
       }
       &:active {
         position: relative;
@@ -46,7 +44,7 @@
         margin-bottom: 8px;
         margin-left: 7px;
         background-color: rgba(255, 255, 255, 0.845);
-        font-family: cursive;
+        font-family: sans-serif;
         font-weight: bold;
         padding: 0 15px;
       }
@@ -58,12 +56,10 @@
         margin-left: 7px;
         padding: 0 10px;
         background-color: rgba(255, 255, 255, 0.845);
-        font-family: cursive;
         cursor: pointer;
         transition: all  0.8s ease;
         &:hover {
-          background-color: yellow;
-          opacity: 0.7;
+          background-color: rgba(149, 208, 254, 0.6);
         }
         &:active {
           position: relative;
@@ -74,30 +70,34 @@
     }
   }
   .top {
-    background-image: url("dec01f2c7a606d0df663ba31f8afd777.jpg");
+    background-image: url("boy.jpg");
     min-height: 100vh;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
       text-decoration: none;
-      font-size: 80px;
-      color: white;
-      line-height: 380px;
-      font-family: cursive;
-      letter-spacing: 10px;
-      font-weight: bold;
-      text-align: center;
-      display: block;
-      width: 100%;
-      text-shadow: 1px 3px skyblue;
+      font-size: 50px;
+      color: rgb(255, 255, 255);
+      font-family: sans-serif;
+      background-color: rgba(1, 86, 177, 0.3);
+      border-radius:25px;
+      padding: 0 20px;
+      transition: all  0.4s ease;
+      &:hover {
+        background-color: rgba(150, 150, 150, 0.2);
+      }
     }
   }
   .mains {
-    height: calc(100vh - 80px);
+    min-height: 100%;
+    position: relative;
   }
   .main {
-    padding: 65px 90px;
+    padding: 65px 85px;
     letter-spacing: 18px;
     .content {
       display: flex;
@@ -106,9 +106,9 @@
       margin-bottom: 10px;
       .image {
         border-radius: 50%;
-        width: 180px;
-        height: 180px;
-        border: 2px solid black; 
+        width: 280px;
+        height: 280px;
+        border: 3px solid rgb(3, 50, 99); 
         cursor: pointer;
         transition: all  0.5s ease;
         &:hover {
@@ -130,20 +130,20 @@
         background-color: rgba(35,35,35,0.6);
         border-radius: 25px;
         font-family: cursive;
-        padding: 2px;
-        top: 70px;
-        left: 5px;
+        padding: 10px;
+        top: 115px;
+        left: 13px;
       }
       .index-good {
         position: absolute;
-        top: 130px;
-        left: 70px;
+        top: 190px;
+        left: 110px;
         text-decoration: none;
         color: cornsilk;
         letter-spacing: normal;
         background-color: rgba(35,35,35,0.6);
         border-radius: 25px;
-        padding: 2px;
+        padding: 15px;
       }
     }
   }
@@ -156,21 +156,23 @@
       text-decoration: none;
       color: black;
       font-weight: bold;
-      font-family: cursive;
+      font-family: sans-serif;
       font-size: 35px;
       display: block;
       text-align: center;
       line-height: 70px;
-      transition: all  0.8s ease;
+      transition: all  0.5s ease;
       &:hover {
-        color: skyblue;
-        opacity: 0.7;
+        color: rgba(0, 145, 255, 0.6);
       }
     }
   }
   .footer {
     height: 30px;
     background-image: url("smork.jpeg");
+    position: absolute;
+    width: 100%;
+    bottom: 0;
     .footer-info {
       color: rgb(224, 231, 237);
       font-family: cursive;

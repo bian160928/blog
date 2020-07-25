@@ -1,7 +1,7 @@
 .wrapper
   .top
-    = link_to root_path, class: "title" do
-      5$ Instrumental
+    = link_to root_path do
+      Instrumental
   .header-top
     -if user_signed_in?
       .user_nav.grid-6
@@ -17,7 +17,8 @@
         = link_to "signUp", new_user_registration_path, class: "post"
     = form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form|
       = form.text_field :keyword, placeholder: "findGenre", class: "search-input", size: "15:15"
-      = form.submit "search", class: "search-btn"
+      = button_tag type: 'submit', class: 'search-btn' do
+        %i.fas.fa-search
   .mains
     .main
       - @posts.each do |post|
@@ -28,6 +29,6 @@
           =link_to post_path(post.id), method: :get, class: "index-good" do
             %i.fas.fa-thumbs-up
             = post.liked_users.count
-  .footer
-    %p.footer-info
-      bianKobayashi/09/10/1996/kobe
+    .footer
+      %p.footer-info
+        bianKobayashi/09/10/1996/kobe

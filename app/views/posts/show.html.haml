@@ -17,7 +17,11 @@
       %p= @post.title
   .contents
     %p.music
-    =audio_tag @post.music, controls: true
+    =audio_tag @post.music, controls: true, controlslist: "nodownload"
+    :javascript
+      audiojs.events.ready(function() {
+        var as = audiojs.createAll();
+      });
   .contents
     %p.hand-sign
       goodCount : #{@post.likes.count}
