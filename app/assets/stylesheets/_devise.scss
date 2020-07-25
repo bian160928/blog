@@ -1,43 +1,57 @@
-.container {
-  border: 1px solid black;
-  border-radius: 50px;
-  margin: 0 auto;
-  width: 350px;
-  background-color: rgba(220, 247, 47, 0.4);
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-h2 {
-  height: 70px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 32px;
-  letter-spacing: 5px;
-  font-family: monospace;
-}
-.field {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  flex-direction: column;
-  margin-bottom: 10px;
-  p {
-    text-align: center;
+.containers {
+  background-image: url("bar.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  .header {
+    text-shadow: 1px 3px rgb(131, 130, 130);
   }
-}
-.actions {
-  display: flex;
-  justify-content: center;
-}
-.submit-up {
-  padding: 5px 20px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  border-radius: 25px;
-}
-.devise-info {
-  text-decoration: none;
-  color: gray;
-  font-size: 12px;
+  .set {
+    padding-top: 120px;
+    .container {
+      border: 1px solid black;
+      border-radius: 50px;
+      margin: 0 auto;
+      width: 350px;
+      background-color: rgba(220, 247, 47, 0.4);
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    h2 {
+      height: 70px;
+      text-align: center;
+      font-size: 38px;
+      font-family: sans-serif;
+    }
+    .field {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      flex-direction: column;
+      margin-bottom: 10px;
+      p {
+        text-align: center;
+      }
+    }
+    .actions {
+      display: flex;
+      justify-content: center;
+    }
+    .submit-up {
+      padding: 5px 20px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      background-color: rgba(35, 141, 255, 0.5);
+      border: none;
+      font-family: sans-serif;
+      cursor: pointer;
+    }
+    .devise-info {
+      text-decoration: none;
+      color: rgb(44, 134, 244);
+      font-size: 14px;
+      text-shadow: 1px 1px rgb(160, 160, 160);
+    }
+  }
 }

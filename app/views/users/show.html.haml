@@ -8,6 +8,8 @@
         = link_to "logOut", destroy_user_session_path, class: "post", method: :delete
         = link_to new_post_path, class: "post" do
           newPost
+        = link_to post_likes_path(current_user.id), class: "post" do
+          %i.fas.fa-thumbs-up
   .mains
     .main
       - @posts.each do |post|
@@ -18,6 +20,6 @@
           =link_to post_path(post.id), method: :get, class: "index-good" do
             %i.fas.fa-thumbs-up
             = post.liked_users.count
-  .footer
-    %p.footer-info
-      bianKobayashi/09/10/1996/kobe
+    .footer
+      %p.footer-info
+        bianKobayashi/09/10/1996/kobe
