@@ -3,7 +3,10 @@
   background-size: cover;
   min-height: 100vh;
   .header {
-    text-shadow: 1px 3px rgb(131, 130, 130);
+    text-shadow: 1px 3px rgb(82, 82, 82);
+    h1 {
+      color: whitesmoke;
+    }
   }
   .set {
     padding-top: 120px;
@@ -21,6 +24,7 @@
       text-align: center;
       font-size: 38px;
       font-family: sans-serif;
+      color: black;
     }
     .field {
       display: flex;

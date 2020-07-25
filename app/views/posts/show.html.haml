@@ -1,7 +1,7 @@
 .wrapper
   .header
     = link_to root_path, class: "title" do
-      5$ Instrumental
+      韻strumental
     -if user_signed_in? && current_user.id  == @post.user_id
       = link_to "/posts/#{@post.id}", method: :delete, class: "delete" do
         delete
@@ -18,10 +18,6 @@
   .contents
     %p.music
     =audio_tag @post.music, controls: true, controlslist: "nodownload"
-    :javascript
-      audiojs.events.ready(function() {
-        var as = audiojs.createAll();
-      });
   .contents
     %p.hand-sign
       goodCount : #{@post.likes.count}
