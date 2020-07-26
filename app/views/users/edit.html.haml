@@ -1,0 +1,19 @@
+.wrapper
+  .edit-header
+    .header
+      = link_to root_path, class: "title" do
+        %h1 韻strumental   
+    = form_with model: @user, class: "edit-form" do |f|
+      .change-box
+        %h1.change-p Change Profile
+        Name
+        = f.text_field :name, class: "changes", maxlength: "6", size: "15x15", placeholder: "maximum 6"
+        Job Request
+        = f.text_field :jobrequest, class: "changes", size: "30x30"
+        Slect Picture
+        = f.label :avatar, class: "changes" do
+          %i.fas.fa-portrait
+        = f.file_field :avatar, class: "avatar"
+        Your Introduction
+        = f.text_area :intro, size: "30x10", maxlength: "150", class: "changes", placeholder: "maximum 150"
+        = f.submit "Remake", class: "submit-c"

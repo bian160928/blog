@@ -11,17 +11,29 @@
         = link_to post_likes_path(current_user.id), class: "post" do
           %i.fas.fa-thumbs-up
   .mains
-    .intro
-      = image_tag current_user.avatar.url, class: "intro-image"
-    .main
-      - @posts.each do |post|
-        .content
-          =link_to post_path(post.id), method: :get do
-            =image_tag post.image.url, class: "image" 
-          =link_to post.user.name, post_path(post.id), method: :get, class: "click"
-          =link_to post_path(post.id), method: :get, class: "index-good" do
-            %i.fas.fa-thumbs-up
-            = post.liked_users.count
+    .main-intro
+      .intro
+        = image_tag @avatar.url, class: "intro-image"
+        = link_to @name, "#", class: "intro-name"
+        %h3.job-r Job Request
+        .job
+          %h3.job-j ↓↓(仕事の依頼)↓↓
+          = link_to @jobrequest, class: "intro-job"
+          %p.job-info (※上記のurlでリンク先に接続されない方はコピペしてGoogleをお使いください)
+        %h3.profile-a Introduce
+        .profile
+          %p.main-pro= @intro
+        .edits
+        = link_to "Edit", edit_user_path(current_user), class: "edit-pro"
+      .main
+        - @posts.each do |post|
+          .content 
+            =link_to post_path(post.id), method: :get do
+              =image_tag post.image.url, class: "image" 
+            =link_to post.user.name, post_path(post.id), method: :get, class: "click"
+            =link_to post_path(post.id), method: :get, class: "index-good" do
+              %i.fas.fa-thumbs-up
+              = post.liked_users.count
     .footer
       %p.footer-info
         bianKobayashi/09/10/1996/kobe
