@@ -11,9 +11,9 @@
         = link_to current_user.name, "/users/#{current_user.id}", class: "post"
         = link_to post_likes_path(current_user.id), class: "post" do
           %i.fas.fa-thumbs-up
-    = form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form|
-      = form.text_field :keyword, placeholder: "findGenre", class: "search-input", size: "15:15"
-      = button_tag type: 'submit', class: 'search-btn' do
+    = form_with(url: search_posts_path, local: true, method: :get, class: "search2-form") do |form|
+      = form.text_field :keyword, placeholder: "findGenre", class: "search2-input", size: "15:15"
+      = button_tag type: 'submit', class: 'search2-btn' do
         %i.fas.fa-search
   .success
     %h1 Done Delete

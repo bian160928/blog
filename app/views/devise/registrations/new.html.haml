@@ -19,6 +19,11 @@
             %br/
             = f.file_field :avatar, class: "avatar"
           .field
+            .work 仕事依頼先
+            = f.label :jobrequest
+            %br/
+            = f.text_field :jobrequest
+          .field
             = f.label :email
             %br/
             = f.email_field :email, autofocus: true, autocomplete: "email"
