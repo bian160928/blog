@@ -11,6 +11,8 @@
         = link_to post_likes_path(current_user.id), class: "post" do
           %i.fas.fa-thumbs-up
   .mains
+    .intro
+      = image_tag current_user.avatar.url, class: "intro-image"
     .main
       - @posts.each do |post|
         .content

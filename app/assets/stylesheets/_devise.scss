@@ -17,7 +17,7 @@
       width: 350px;
       background-color: rgba(220, 247, 47, 0.4);
       padding-top: 20px;
-      padding-bottom: 20px;
+      padding-bottom: 15px;
     }
     h2 {
       height: 70px;
@@ -32,7 +32,14 @@
       justify-content: center;
       font-weight: bold;
       flex-direction: column;
-      margin-bottom: 10px;
+      .profile {
+        margin-top: 10px;
+        margin-bottom: 15px;
+      }
+      i {
+        font-size: 40px;
+        cursor: pointer;
+      }
       p {
         text-align: center;
       }
@@ -43,7 +50,7 @@
     }
     .submit-up {
       padding: 5px 20px;
-      margin-top: 10px;
+      margin-top: 20px;
       margin-bottom: 20px;
       border-radius: 10px;
       background-color: rgba(35, 141, 255, 0.5);
@@ -58,4 +65,7 @@
       text-shadow: 1px 1px rgb(160, 160, 160);
     }
   }
+}
+.avatar {
+  display: none;
 }
