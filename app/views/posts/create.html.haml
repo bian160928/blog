@@ -2,7 +2,7 @@
   .header
     = link_to root_path, class: "title" do
       韻strumental
-  .header-top
+  .header-top1
     -if user_signed_in?
       .user_nav.grid-6
         = link_to "logOut", destroy_user_session_path, class: "post", method: :delete

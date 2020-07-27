@@ -1,7 +1,4 @@
 .wrapper
-  .top
-    = link_to root_path do
-      韻strumental
   .header-top
     -if user_signed_in?
       .user_nav.grid-6
@@ -11,10 +8,14 @@
         = link_to current_user.name, "/users/#{current_user.id}", class: "post"
         = link_to post_likes_path(current_user.id), class: "post" do
           %i.fas.fa-thumbs-up
+        = link_to "Edit", edit_user_path(current_user), class: "post"
     -else
       .grid-6
         = link_to "logIn", new_user_session_path, class: "post"
         = link_to "signUp", new_user_registration_path, class: "post"
+  .top
+    = link_to root_path do
+      韻strumental
   .mains
     = form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form|
       = form.text_field :keyword, placeholder: "Search for chill/trap/old school/rap/hiphop...etc", class: "search-input", size: "15:15"

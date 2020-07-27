@@ -1,71 +1,84 @@
 .main-intro {
-  display: flex;
   .intro {
     display: flex;
     align-items: center;
-    flex-direction: column;
-    width: 350px;
-    border-right: 2px solid rgb(199, 199, 199);
-    height: 100vh;
-    background-color: rgba(240, 240, 240, 0.5);
+    max-width: 100%;
+    margin: 0 95px;
+    height: 350px;
+    background-image: url("sad-.jpg");
+    background-size: cover;
+    padding-top: 30px;
     .intro-image {
       border-radius: 50%;
-      width: 250px;
-      height: 250px;
-      border: 2px solid black;
-      margin-top: 40px;
+      width: 230px;
+      height: 230px;
+      border: none;
+      margin-top: 15px;
+      margin-left: 30px;
+    }
+    .name-job {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 50px;
     }
     .intro-name {
       text-decoration: none;
-      font-size: 35px;
-      color: rgb(38, 37, 37);
-      line-height: 50px;
-      display: inline-block;
-      margin-top: 30px;
-      margin-bottom: 40px;
-      background-color: rgba(0, 108, 191, 0.2);
-      border-radius: 5px;
+      font-size: 25px;
+      color: rgb(255, 255, 255);
+      line-height: 30px;
+      background-color: rgba(0, 0, 0, 0.7);
       padding:0 15px;
-      font-weight: bold;
       font-family: serif;
       cursor: default;
+      margin-bottom: 12px;
+    }
+    .job-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .job {
       display: flex;
       flex-direction: column;
       align-items: center;
       font-family: serif;
-      font-size: 18px;
-      background-color: rgba(223, 223, 223, 0.6);
-      padding-bottom: 20px;
-      border-radius: 5px;
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-top: 5px;
-      width: 250px;
-      .job-j {
-        font-size: 15px;
-      }
-      .job-info {
-        font-size: 12px;
-      }
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 340px;
+      margin-top: 5px;
       a{
-        width: 230px;
+        width: 330px;
         word-break: break-all;
-        color: rgb(11, 48, 254);
+        color: rgb(255, 255, 255);
+        font-size: 17px;
+        text-align: center;
         text-decoration: none;
+        transition: all  0.5s ease;
+        &:hover {
+        text-decoration: underline;
+        }
       }
     }
     .job-r {
-      font-size: 28px;
-      font-weight: bold;
+      font-size: 14px;
       font-family: serif;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 0 3px
+    }
+    .intro-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .profile-a {
-      margin-top: 40px;
-      font-size: 28px;
+      font-size: 14px;
       font-family: serif;
-      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding:  0 3px;
+      margin-top: 12px;
+      margin-bottom: 5px;
     }
     .profile {
       display: flex;
@@ -73,9 +86,9 @@
       align-items: center;
       font-family: serif;
       background-color: rgba(223, 223, 223, 0.6);
-      padding-bottom: 20px;
-      border-radius: 5px;
       width: 250px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
       .main-pro {
         word-break: break-all;
       }
@@ -83,9 +96,5 @@
     .edits {
       margin-top: 30px;
     }
-  }
-  .main {
-    width: calc(100% - 350px);
-    height: 100vh;
   }
 }

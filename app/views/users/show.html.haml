@@ -1,30 +1,29 @@
 .wrapper
-  .header
-    = link_to root_path, class: "title" do
-      韻strumental
   .header-top
     -if user_signed_in?
       .user_nav.grid-6
+        = link_to root_path, class: "post" do
+          韻strumental
         = link_to "logOut", destroy_user_session_path, class: "post", method: :delete
         = link_to new_post_path, class: "post" do
           newPost
         = link_to post_likes_path(current_user.id), class: "post" do
           %i.fas.fa-thumbs-up
+        = link_to "Edit", edit_user_path(current_user), class: "post"
   .mains
     .main-intro
       .intro
         = image_tag @avatar.url, class: "intro-image"
-        = link_to @name, "#", class: "intro-name"
-        %h3.job-r Job Request
-        .job
-          %h3.job-j ↓↓(仕事の依頼)↓↓
-          = link_to @jobrequest, class: "intro-job"
-          %p.job-info (※上記のurlでリンク先に接続されない方はコピペしてGoogleをお使いください)
-        %h3.profile-a Introduce
-        .profile
-          %p.main-pro= @intro
-        .edits
-        = link_to "Edit", edit_user_path(current_user), class: "edit-pro"
+        .name-job
+          = link_to @name, "#", class: "intro-name"
+          .job-main
+            %h3.job-r Job Request
+            .job
+              = Rinku.auto_link(@jobrequest, :all, 'target="_blank"').html_safe
+          .intro-main
+            %h3.profile-a Introduce
+            .profile
+              %p.main-pro= @intro
       .main
         - @posts.each do |post|
           .content 
