@@ -7,12 +7,14 @@
         = link_to "logOut", destroy_user_session_path, class: "post", method: :delete
         = link_to new_post_path, class: "post" do
           newPost
+        = link_to current_user.name, "/users/#{current_user.id}", class: "post"
         = link_to post_likes_path(current_user.id), class: "post" do
           %i.fas.fa-thumbs-up
         = link_to "Edit", edit_user_path(current_user), class: "post"
   .mains
     .main-intro
       .intro
+        = image_tag @backimage.url, class: "back-image"
         = image_tag @avatar.url, class: "intro-image"
         .name-job
           = link_to @name, "#", class: "intro-name"
@@ -25,6 +27,7 @@
             .profile
               %p.main-pro= @intro
       .main
+        %h3.beat-index Beats you uploaded
         - @posts.each do |post|
           .content 
             =link_to post_path(post.id), method: :get do

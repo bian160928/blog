@@ -14,6 +14,10 @@
         = f.label :avatar, class: "changes" do
           %i.fas.fa-portrait
         = f.file_field :avatar, class: "avatar"
+        Slect Background Image
+        = f.label :backimage, class: "changes" do
+          %i.fas.fa-file-image
+        = f.file_field :backimage, class: "avatar"
         Your Introduction
         = f.text_area :intro, size: "30x3", maxlength: "25", class: "changes", placeholder: "maximum 25"
         = f.submit "Remake", class: "submit-c"

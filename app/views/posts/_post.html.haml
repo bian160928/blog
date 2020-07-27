@@ -2,6 +2,8 @@
   .header-top
     -if user_signed_in?
       .user_nav.grid-6
+        = link_to root_path, class: "post" do
+          韻strumental
         = link_to "logOut", destroy_user_session_path, class: "post", method: :delete
         = link_to new_post_path, class: "post" do
           newPost
