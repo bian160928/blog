@@ -7,14 +7,17 @@
   width: 100%;
   .header-top {
     height: 50px;
+    position: fixed;
     display: flex;
     justify-content: center;
-    background-image: url("bar.jpeg");
+    background-color: rgba(1, 7, 57, 0.6);
+    height: 60px;
+    min-width: 100%;
+    z-index: 10;
     .post {
       text-decoration: none;
       color: black;
       border: 2px solid rgb(40, 38, 38);
-      border-radius: 50px;
       padding: 6px;
       padding-left: 40px;
       padding-right: 40px;
@@ -22,7 +25,7 @@
       font-size: 15px;
       letter-spacing: 2px;
       margin-left: 10px;
-      line-height: 50px;
+      line-height: 60px;
       font-family: serif;
       background-color: rgba(255, 255, 255, 0.845);
       transition: all  0.5s ease;
@@ -51,7 +54,6 @@
       color: rgb(255, 255, 255);
       font-family: sans-serif;
       background-color: rgba(1, 86, 177, 0.3);
-      border-radius:25px;
       padding: 0 20px;
       transition: all  0.4s ease;
       &:hover {
@@ -64,18 +66,17 @@
     position: relative;
   }
   .main {
-    padding: 65px 85px;
-    letter-spacing: 18px;
+    padding: 65px 95px;
+    letter-spacing: 14px;
     .content {
       display: flex;
       display: inline-block;
       position: relative;
       margin-bottom: 10px;
       .image {
-        border-radius: 10px;
         width: 280px;
         height: 280px;
-        border: 2px solid rgb(3, 50, 99); 
+        border: none; 
         cursor: pointer;
         transition: all  0.5s ease;
         &:hover {
@@ -196,27 +197,61 @@
     }
   }
 }
-.search2-input {
-  margin-left: 8px;
-  border-radius: 25px;
-  margin-top: 7px;
-  padding:3px 8px ;
-  background-color: rgba(255, 255, 255, 0.845);
-}
-.search2-btn {
-  border-radius: 25px;
-  margin-top: 7px;
-  padding: 7px;
-  background-color: rgba(255, 255, 255, 0.845);
-  margin-left: 3px;
-  cursor: pointer;
-  transition: all  0.5s ease;
-  &:hover {
-    background-color: rgba(149, 208, 254, 0.6);
+
+.header-top1 {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(1, 7, 57, 0.6);
+  height: 60px;
+  width: 100%;
+  .post {
+    text-decoration: none;
+    color: black;
+    border: 2px solid rgb(40, 38, 38);
+    padding: 6px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    line-height: 60px;
+    font-family: serif;
+    background-color: rgba(255, 255, 255, 0.845);
+    transition: all  0.5s ease;
+    &:hover {
+      background-color: rgba(149, 208, 254, 0.6);
+    }
+    &:active {
+      position: relative;
+      top: 4px;
+      box-shadow: none;
+    }
   }
-  &:active {
-    position: relative;
-    top: 4px;
-    box-shadow: none;
+  .search2-input {
+    margin-left: 13px;
+    margin-top: 14px;
+    padding:1px 18px ;
+    background-color: rgba(255, 255, 255, 0.845);
+    border: 2px solid rgb(40, 38, 38);
+  }
+  .search2-btn {
+    border-radius: 25px;
+    margin-top: 13px;
+    padding: 7px;
+    background-color: rgba(255, 255, 255, 0.845);
+    border: 2px solid rgb(40, 38, 38);
+    margin-left: 3px;
+    cursor: pointer;
+    transition: all  0.5s ease;
+    &:hover {
+      background-color: rgba(149, 208, 254, 0.6);
+    }
+    &:active {
+      position: relative;
+      top: 4px;
+      box-shadow: none;
+    }
   }
 }

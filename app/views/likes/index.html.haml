@@ -2,13 +2,14 @@
   .header
     = link_to root_path, class: "title" do
       韻strumental
-  .header-top
+  .header-top1
     -if user_signed_in?
       .user_nav.grid-6
         = link_to "logOut", destroy_user_session_path, class: "post", method: :delete
         = link_to new_post_path, class: "post" do
           newPost
         = link_to current_user.name, "/users/#{current_user.id}", class: "post"
+        = link_to "Edit", edit_user_path(current_user), class: "post"
   .mains
     .main
       - current_user.liked_posts.each do |post|
