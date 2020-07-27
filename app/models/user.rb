@@ -9,6 +9,7 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :avatar, presence: true
   mount_uploader :avatar, AvatarUploader
+  mount_uploader :backimage, BackimageUploader
   
   def already_liked?(post)
     self.likes.exists?(post_id: post.id)

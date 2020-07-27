@@ -4,6 +4,7 @@ class UsersController < ApplicationController
     @name = user.name
     @avatar = user.avatar
     @jobrequest = user.jobrequest
+    @backimage = user.backimage
     @intro = user.intro
     @posts = user.posts
   end
@@ -26,6 +27,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.fetch(:user, {}).permit(:name, :avatar, :jobrequest, :intro)
+    params.fetch(:user, {}).permit(:name, :avatar, :jobrequest, :intro, :backimage)
   end
 end
