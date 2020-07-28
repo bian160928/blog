@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :liked_posts, through: :likes, source: :post,dependent: :destroy
+  has_many :comments
   validates :email, presence: true, uniqueness: true
   mount_uploader :avatar, AvatarUploader
   mount_uploader :backimage, BackimageUploader
