@@ -6,18 +6,18 @@
     = form_with model: @user, class: "edit-form" do |f|
       .change-box
         %h1.change-p Change Profile
-        Name
+        .change2 Name
         = f.text_field :name, class: "changes", maxlength: "6", size: "15x15", placeholder: "maximum 6"
-        Job Request
-        = f.text_field :jobrequest, class: "changes", size: "30x30"
-        Slect Picture
+        .change2 Job Request
+        = f.text_field :jobrequest, class: "changes", size: "30x30", placeholder: "スペルミスがあると黒文字で表示されます"
+        .change2 Image
         = f.label :avatar, class: "changes" do
           %i.fas.fa-portrait
         = f.file_field :avatar, class: "avatar"
-        Slect Background Image
+        .change2 BackGround Image
         = f.label :backimage, class: "changes" do
           %i.fas.fa-file-image
         = f.file_field :backimage, class: "avatar"
-        Your Introduction
+        .change2 Your Introduction
         = f.text_area :intro, size: "30x3", maxlength: "25", class: "changes", placeholder: "maximum 25"
         = f.submit "Remake", class: "submit-c"

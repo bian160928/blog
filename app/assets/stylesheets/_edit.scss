@@ -19,7 +19,6 @@
     border-radius: 10px;
     .changes {
       margin-bottom: 5px;
-      color: white;
     }
     i {
       font-size: 40px;
@@ -41,5 +40,13 @@
   }
 }
 .edit-form {
+  font-weight: normal;
+}
+.change2 {
   font-weight: bold;
+  font-size: 21px;
+  font-family: serif;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 5px;
+  padding: 0 5px;
 }
