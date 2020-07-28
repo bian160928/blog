@@ -13,13 +13,13 @@
             %br/
             = f.text_field :name, autofocus: true, maxlength: "6", size: "15*15", placeholder: "maximum 6"
           .field
-            .profile Profile Image(※)
+            .profile Profile Image
             = f.label :avatar do
               %i.fas.fa-portrait
             %br/
             = f.file_field :avatar, class: "avatar"
           .field
-            .work 仕事依頼先
+            .work ↓仕事依頼先↓
             = f.label :jobrequest
             %br/
             = f.text_field :jobrequest
