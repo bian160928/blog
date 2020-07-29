@@ -5,11 +5,11 @@
         %h1 韻strumental   
     = form_with model: @user, class: "edit-form" do |f|
       .change-box
-        %h1.change-p Change Profile
+        %h1.change-p Edit Profile
         .change2 Name
         = f.text_field :name, class: "changes", maxlength: "6", size: "15x15", placeholder: "maximum 6"
         .change2 Job Request
-        = f.text_field :jobrequest, class: "changes", size: "30x30", placeholder: "スペルミスがあると黒文字で表示されます"
+        = f.text_field :jobrequest, class: "changes", size: "40x40", placeholder: "スペルミスがあると黒文字で表示されます"
         .change2 Image
         = f.label :avatar, class: "changes" do
           %i.fas.fa-portrait
