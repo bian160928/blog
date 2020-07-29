@@ -9,7 +9,6 @@
         = link_to @post.user.name, "/users/#{@post.user.id}", class: "post"
         = link_to post_likes_path(current_user.id), class: "post" do
           %i.fas.fa-thumbs-up
-        = link_to "Edit", edit_user_path(current_user), class: "post"
       -if user_signed_in? && current_user.id  == @post.user_id
         = link_to "/posts/#{@post.id}", method: :delete, class: "delete" do
           delete
@@ -40,9 +39,11 @@
       - if current_user
         = form_with(model: [@post, @comment], local: true, class: "search-form") do |form|
           = form.text_area :text, placeholder: "Pusu Comments", class: "comment-input"
-          = form.submit "SEND", class: 'comment-submit'
+          = button_tag type: 'submit', class: 'comment-submit' do
+            %i.fas.fa-comments
+
       .comments
-        %h4 Comments list
+        %h4 Comments List
         - if @comments
           .comments-border
             - @comments.each do |comment|
@@ -54,4 +55,3 @@
                     .comment-text
                       ：
                       = comment.text
-                

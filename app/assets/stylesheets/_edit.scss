@@ -2,11 +2,16 @@
   background-image: url("edit.jpg");
   background-size: cover;
   min-height: 100vh;
+  padding-bottom: 20px;
   .change-p {
     text-align: center;
     font-size: 50px;
     margin-bottom: 30px;
     font-family: serif;
+    padding: 0 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    letter-spacing: 7px;
   }
   .change-box {
     display: flex;
@@ -16,6 +21,7 @@
     margin: 50px auto;
     width: 500px;
     background-color: rgba(119, 157, 254, 0.3);
+    padding-top: 30px;
     border-radius: 10px;
     .changes {
       margin-bottom: 5px;
@@ -23,7 +29,7 @@
     i {
       font-size: 40px;
       cursor: pointer;
-      margin-top: 10px;
+      margin-top: 2px;
     }
     .submit-c {
       border: none;
@@ -50,4 +56,6 @@
   background-color: rgba(255, 255, 255, 0.5);
   margin-bottom: 5px;
   padding: 0 5px;
+  border-radius: 5px;
+  margin-top: 3px;
 }
