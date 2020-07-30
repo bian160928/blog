@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   max-width: 100%;
-  margin: 0 95px;
-  height: 340px;
+  margin: 0 130px;
+  height: 320px;
   background-color: whitesmoke;
   background-size: cover;
   .back-image {
@@ -51,7 +51,8 @@
     align-items: center;
     font-family: serif;
     background-color: rgba(0, 0, 0, 0.7);
-    width: 340px;
+    padding: 0 5px;
+    width: calc(100%-340px);
     margin-top: 5px;
     a{
       width: 330px;
@@ -109,5 +110,6 @@
   text-align: center;
   font-size: 30px;
   font-weight: bold;
+  letter-spacing: 10px;
 }
 

@@ -66,12 +66,13 @@
     position: relative;
   }
   .main {
-    padding: 65px 95px;
+    margin: 65px 110px 0 110px;
+    padding-bottom: 150px;
     .content {
       display: flex;
       display: inline-block;
       position: relative;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       margin-left: 15px;
       .image {
         width: 270px;
@@ -98,9 +99,26 @@
         background-color: rgba(35,35,35,0.6);
         border-radius: 25px;
         font-family: serif;
-        padding: 10px;
-        top: 115px;
+        padding: 5px 10px;
+        top: 90px;
         left: 8px;
+      }
+      .click2 {
+        position: absolute;
+        text-decoration: none;
+        color: cornsilk;
+        letter-spacing: 5px;
+        background-color: rgba(35,35,35,0.6);
+        border-radius: 10px;
+        font-family: serif;
+        padding: 2px;
+        padding-left: 5px;
+        font-size: 10px;
+        margin-right: 8px;
+        top: 130px;
+        left: 8px;
+        width: calc(100%-230px);
+        word-break: break-all
       }
       .index-good {
         position: absolute;
@@ -138,6 +156,7 @@
   .footer {
     height: 30px;
     background-image: url("bar.jpeg");
+    background-size: cover;
     position: absolute;
     width: 100%;
     bottom: 0;
