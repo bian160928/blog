@@ -3,6 +3,7 @@ class Post < ApplicationRecord
   mount_uploader :music, MusicUploader
   mount_uploader :image, ImageUploader
 
+  validates :theme, presence: true
   validates :title, presence: true
   validates :music, presence: true
   validates :image, presence: true

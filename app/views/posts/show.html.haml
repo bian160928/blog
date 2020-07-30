@@ -22,8 +22,8 @@
           %p= link_to @post.user.name, "/users/#{@post.user.id}", class: "user-name"
       .contents
         .content
-          %h3 Genre
-          %p.genre= @post.title
+          %h3 title
+          %p.genre= @post.theme
       .contents
         %p.music
         =audio_tag @post.music, controls: true, controlslist: "nodownload"
@@ -37,6 +37,8 @@
             = link_to post_likes_path(@post), method: :post, class: "hand-bad", remote: true do
               %i.fas.fa-thumbs-up
       .main3
+        .between Genre:
+        .between1= @post.title
         .main-show
           .comments-form
             - if current_user
@@ -67,39 +69,46 @@
               =link_to post_path(post.id), method: :get do
                 =image_tag post.image.url, class: "image2" 
               =link_to post.user.name, post_path(post.id), method: :get, class: "click-show"
-              =link_to post.title, post_path(post.id), method: :get, class: "click-show2"
+              =link_to post.theme, post_path(post.id), method: :get, class: "click-show2"
           %h5.catego trap
           - @trap.each do |post|
             .content2
               =link_to post_path(post.id), method: :get do
                 =image_tag post.image.url, class: "image2" 
               =link_to post.user.name, post_path(post.id), method: :get, class: "click-show"
-              =link_to post.title, post_path(post.id), method: :get, class: "click-show2"
+              =link_to post.theme, post_path(post.id), method: :get, class: "click-show2"
           %h5.catego emotion
           - @emo.each do |post|
             .content2
               =link_to post_path(post.id), method: :get do
                 =image_tag post.image.url, class: "image2" 
               =link_to post.user.name, post_path(post.id), method: :get, class: "click-show"
-              =link_to post.title, post_path(post.id), method: :get, class: "click-show2"
-          %h5.catego school
+              =link_to post.theme, post_path(post.id), method: :get, class: "click-show2"
+          %h5.catego old school
           - @school.each do |post|
             .content2
               =link_to post_path(post.id), method: :get do
                 =image_tag post.image.url, class: "image2" 
               =link_to post.user.name, post_path(post.id), method: :get, class: "click-show"
-              =link_to post.title, post_path(post.id), method: :get, class: "click-show2"
+              =link_to post.theme, post_path(post.id), method: :get, class: "click-show2"
           %h5.catego r&b
           - @rb.each do |post|
             .content2
               =link_to post_path(post.id), method: :get do
                 =image_tag post.image.url, class: "image2" 
               =link_to post.user.name, post_path(post.id), method: :get, class: "click-show"
-              =link_to post.title, post_path(post.id), method: :get, class: "click-show2"
+              =link_to post.theme, post_path(post.id), method: :get, class: "click-show2"
           %h5.catego reggae
           - @rg.each do |post|
             .content2
               =link_to post_path(post.id), method: :get do
                 =image_tag post.image.url, class: "image2" 
               =link_to post.user.name, post_path(post.id), method: :get, class: "click-show"
-              =link_to post.title, post_path(post.id), method: :get, class: "click-show2"
+              =link_to post.theme, post_path(post.id), method: :get, class: "click-show2"
+          %h5.catego jazz
+          - @jazz.each do |post|
+            .content2
+              =link_to post_path(post.id), method: :get do
+                =image_tag post.image.url, class: "image2" 
+              =link_to post.user.name, post_path(post.id), method: :get, class: "click-show"
+              =link_to post.theme, post_path(post.id), method: :get, class: "click-show2"

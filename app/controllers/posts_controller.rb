@@ -23,9 +23,10 @@ class PostsController < ApplicationController
     @chill = Post.where('title LIKE(?)', "%chill%").order("created_at DESC").limit(6)
     @trap = Post.where('title LIKE(?)', "%trap%").order("created_at DESC").limit(6)
     @emo = Post.where('title LIKE(?)', "%emo%").order("created_at DESC").limit(6)
-    @school = Post.where('title LIKE(?)', "%school%").order("created_at DESC").limit(6)
-    @rb = Post.where('title LIKE(?)', "%rb%").order("created_at DESC").limit(6)
-    @rg = Post.where('title LIKE(?)', "%reggae%").order("created_at DESC").limit(6)
+    @school = Post.where('title LIKE(?)', "old school%").order("created_at DESC").limit(6)
+    @rb = Post.where('title LIKE(?)', "%r&b%").order("created_at DESC").limit(6)
+    @rg = Post.where('title LIKE(?)', "%regg%").order("created_at DESC").limit(6)
+    @jazz = Post.where('title LIKE(?)', "%jazz%").order("created_at DESC").limit(6)
     @post = Post.find(params[:id])
     @comment = Comment.new
     @comments = @post.comments.includes(:user).order("created_at DESC")
@@ -43,7 +44,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:name, :title, :music, :image).merge(user_id: current_user.id)
+    params.require(:post).permit(:name, :title, :music, :image, :theme).merge(user_id: current_user.id)
   end
 
   def move_to_index

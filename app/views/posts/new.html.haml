@@ -9,7 +9,9 @@
         = form_with model: @post, local: true do |f|
           .message
             %h3.new-name= current_user.name
-            = f.text_field :title, class: "text", placeholder: "chill/trap/old scool...etc"
+            = f.text_field :theme, class: "text", placeholder: "* title(max18)", maxlength: "18"
+            .content-file
+            = f.text_field :title, class: "text", placeholder: "* chill/trap/old scool...etc"
             .content-file
               = f.label :music do
                 %i.fa.fa-file-audio
