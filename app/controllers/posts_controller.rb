@@ -20,10 +20,12 @@ class PostsController < ApplicationController
   end
 
   def show
-    @chill = Post.where('title LIKE(?)', "%chill%").order("created_at DESC").limit(10)
-    @trap = Post.where('title LIKE(?)', "%trap%").order("created_at DESC").limit(10)
-    @emo = Post.where('title LIKE(?)', "%emo%").order("created_at DESC").limit(10)
-    @school = Post.where('title LIKE(?)', "%school%").order("created_at DESC").limit(10)
+    @chill = Post.where('title LIKE(?)', "%chill%").order("created_at DESC").limit(6)
+    @trap = Post.where('title LIKE(?)', "%trap%").order("created_at DESC").limit(6)
+    @emo = Post.where('title LIKE(?)', "%emo%").order("created_at DESC").limit(6)
+    @school = Post.where('title LIKE(?)', "%school%").order("created_at DESC").limit(6)
+    @rb = Post.where('title LIKE(?)', "%rb%").order("created_at DESC").limit(6)
+    @rg = Post.where('title LIKE(?)', "%reggae%").order("created_at DESC").limit(6)
     @post = Post.find(params[:id])
     @comment = Comment.new
     @comments = @post.comments.includes(:user).order("created_at DESC")
