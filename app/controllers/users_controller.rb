@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     @jobrequest = user.jobrequest
     @backimage = user.backimage
     @intro = user.intro
-    @posts = user.posts
+    @posts = user.posts.order("created_at DESC")
   end
 
   def edit

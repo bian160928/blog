@@ -18,6 +18,7 @@
           =link_to post_path(post.id), method: :get do
             =image_tag post.image.url, class: "image" 
           =link_to post.user.name, post_path(post.id), method: :get, class: "click"
+          =link_to post.theme, post_path(post.id), method: :get, class: "click-theme"
           =link_to post.title, post_path(post.id), method: :get, class: "click2"
           =link_to post_path(post.id), method: :get, class: "index-good" do
             %i.fas.fa-thumbs-up

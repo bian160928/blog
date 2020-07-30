@@ -5,12 +5,13 @@
   .header-top1
     -if user_signed_in?
       .user_nav.grid-6
-        = link_to "logOut", destroy_user_session_path, class: "post", method: :delete
         = link_to new_post_path, class: "post" do
           newPost
         = link_to current_user.name, "/users/#{current_user.id}", class: "post"
         = link_to post_likes_path(current_user.id), class: "post" do
           %i.fas.fa-thumbs-up
+        = link_to "/posts/#{@post.id}", method: :delete, class: "delete2" do
+          delete
     = form_with(url: search_posts_path, local: true, method: :get, class: "search2-form") do |form|
       = form.text_field :keyword, placeholder: "findGenre", class: "search2-input", size: "15:15"
       = button_tag type: 'submit', class: 'search2-btn' do
@@ -24,8 +25,8 @@
       %p= link_to @post.user.name, "/users/#{@post.user.id}", class: "user-name"
   .contents
     .content
-      %h3 Genre
-      %p= @post.title
+      %h3 title
+      %p= @post.theme
   .contents
     %p.music
     =audio_tag @post.music, controls: true, controlslist: "nodownload"
