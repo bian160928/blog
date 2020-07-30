@@ -76,6 +76,14 @@
 .shows {
   padding-top: 120px;
 }
+.beat-main {
+  margin-top: 100px;
+  margin-left: 75px;
+}
+.main-show {
+  display: flex;
+  justify-content: space-around;
+}
 .show {
   position: relative;
   display: flex;
@@ -98,6 +106,11 @@
   padding-top: 10px;
   .content {
     padding-top: 20px;
+    text-align: center;
+  }
+  .genre {
+    word-break: break-all;
+    width: 430px;
   }
   p{
     padding-bottom: 20px;
@@ -257,4 +270,69 @@
       border-radius: 25px;
     }
   }
+}
+.main2 {
+  margin: 65px 40px 0 110px;
+  padding-bottom: 150px;
+  .content2 {
+    display: flex;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    .image2 {
+      width: 125px;
+      height: 125px;
+      border: none; 
+      cursor: pointer;
+      transition: all  0.5s ease;
+      &:hover {
+        color: rgb(75, 173, 211);
+        opacity: 0.5;
+      }
+      &:active {
+        position: relative;
+        top: 5px;
+        box-shadow: none;
+      }
+    }
+    .click-show {
+      position: absolute;
+      text-decoration: none;
+      color: cornsilk;
+      letter-spacing: 5px;
+      background-color: rgba(35,35,35,0.6);
+      border-radius: 25px;
+      font-family: serif;
+      padding: 5px 10px;
+      font-size: 12px;
+      top: 10px;
+      left: 8px;
+    }
+    .click-show2 {
+      position: absolute;
+      text-decoration: none;
+      color: cornsilk;
+      letter-spacing: 5px;
+      background-color: rgba(35,35,35,0.6);
+      border-radius: 10px;
+      font-family: serif;
+      padding: 2px;
+      padding-left: 5px;
+      font-size: 10px;
+      margin-right: 8px;
+      top: 40px;
+      left: 8px;
+      width: calc(100%-230px);
+      word-break: break-all
+    }
+  }
+}
+.catego {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-top: 1px solid black;
 }
