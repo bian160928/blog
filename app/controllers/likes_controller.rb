@@ -2,7 +2,7 @@ class LikesController < ApplicationController
   
   def index
     @user = current_user
-    @posts = Like.where(user_id: @user.id).all 
+    @posts = Like.where(user_id: @user.id).all.order("created_at DESC")
   end
   
   def create

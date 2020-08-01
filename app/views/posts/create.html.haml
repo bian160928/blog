@@ -21,11 +21,11 @@
     =image_tag @post.image.url, class: "image" 
   .contents
     .content
-      %h3 name
+      %h3.song-name name
       %p= link_to @post.user.name, "/users/#{@post.user.id}", class: "user-name"
   .contents
     .content
-      %h3 title
+      %h3.song-name title
       %p= @post.theme
   .contents
     %p.music

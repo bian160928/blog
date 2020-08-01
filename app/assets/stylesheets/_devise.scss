@@ -55,12 +55,17 @@
       border-radius: 10px;
       background-color: rgba(35, 141, 255, 0.5);
       border: none;
+      font-weight: bold;
       font-family: sans-serif;
       cursor: pointer;
+      transition: all  0.4s ease;
+      &:hover {
+        background-color: rgba(206, 206, 206, 0.5);
+      }
     }
     .devise-info {
       text-decoration: none;
-      color: rgb(44, 134, 244);
+      color: rgb(0, 0, 0);
       font-size: 14px;
       text-shadow: 1px 1px rgb(160, 160, 160);
     }

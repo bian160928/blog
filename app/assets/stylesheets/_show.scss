@@ -8,7 +8,7 @@
   background-size: cover;
   .back-image {
     width: 100%;
-    height: 340px;
+    height: 400px;
     position: relative;
     background-size: cover;
   }
@@ -17,7 +17,7 @@
     width: 230px;
     height: 230px;
     border: none;
-    margin-top: 25px;
+    margin-top: 45px;
     left: 200px;
     position: absolute;
   }
@@ -106,10 +106,11 @@
   }
 }
 .beat-index {
-  margin-bottom: 15px;
+  margin-bottom: 35px;
   text-align: center;
   font-size: 30px;
   font-weight: bold;
   letter-spacing: 10px;
+  padding-top: 20px;
 }
 
