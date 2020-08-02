@@ -42,8 +42,8 @@
         .main-show
           .comments-form
             - if current_user
-              = form_with(model: [@post, @comment], local: true, class: "search-form") do |form|
-                = form.text_area :text, placeholder: "Pusu Comments", class: "comment-input"
+              = form_with(model: [@post, @comment], local: true, class: "search-form", id: "new_comment") do |form|
+                = form.text_area :text, placeholder: "Pusu Comments", class: "comment-input", rows: "2"
                 = button_tag type: 'submit', class: 'comment-submit' do
                   %i.fas.fa-comments
             .comments
@@ -51,7 +51,7 @@
               - if @comments
                 .comments-border
                   - @comments.each do |comment|
-                    %p 
+                    %p
                       %strong.comment-content
                         .c
                           = image_tag comment.user.avatar.url, class: "comment-image"
@@ -112,3 +112,4 @@
                 =image_tag post.image.url, class: "image2" 
               =link_to post.user.name, post_path(post.id), method: :get, class: "click-show"
               =link_to post.theme, post_path(post.id), method: :get, class: "click-show2"
+      
