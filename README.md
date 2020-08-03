@@ -1,24 +1,33 @@
-# README
+# 韻strumental
+___________
+## アプリ概要
+___________
+「自分の評価するトラックメーカーにビートを
+作ってもらいたい」問言う希望にお答えした
+HipHop,Reggae専用のトラックミュージックサイトです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 機能
+___________
+### Ruby on Railsで制作したアプリとなります
+- 機能1 ユーザー登録時にJob Request欄にご自分の仕事依頼先を記入。
+- 機能2 いいね機能もあり自分の気になるトラックメーカーのビートのみをいいね一覧に保存できる。
+- 機能3 トピック機能でカテゴリー別に新規投稿曲6曲までトピックされる。
 
-Things you may want to cover:
+## 使い方
+___________
+1.初めての方はsign up、アカウントをお持ちの方はlogin画面でメールアドレスとパスワードを記入。
+2.マイページ画面もあり背景やアバターをグラフィカルにデザイン可能。
+3.自分で作成したビートを投稿。
 
-* Ruby version
+## その他
+___________
+今後はダイレクトメッセージやaudio.jsなどを使い機能を拡張する予定です。
 
-* System dependencies
+## 作者
+___________
+小林 敏晏(ビアン)
+mail to: biankobayashi@gmail.com
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## ライセンス
+___________
+？？？？？？？
