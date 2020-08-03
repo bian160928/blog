@@ -28,7 +28,7 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
-      $('.comments-border').append(html);
+      $('.comments-border').prepend(html);
       $('.comment-input').val('');
       $('.comment-submit').prop('disabled', false);
     })
