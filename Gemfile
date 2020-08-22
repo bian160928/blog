@@ -70,3 +70,4 @@ gem 'mini_magick'
 gem 'rinku'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
+gem "aws-sdk-s3", require: false
