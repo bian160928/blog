@@ -1,14 +1,7 @@
 # 韻strumental
 
-### トップページ
-![トップページ](instrumental.gif)
-
-### 詳細ページ
-![詳細ページ](instrumental2.gif)
-
-### マイページ/いいね一覧
-![マイページ、いいね一覧](instrumental3.gif)
-
+![トップページ](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![トップページ](https://i.gyazo.com/c99e96e02e5c803c8586381ab9d792cf.jpg)
 ___________
 ## アプリ概要
 ___________
