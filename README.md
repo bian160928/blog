@@ -1,6 +1,7 @@
 # 韻strumental
 
-![Alt Text](8ec189aeb5aea4bb9a26c4361820727e.mp4)
+![トップページ](https://i.gyazo.com/c414d94f8a41ca1fff341cad2668b638.jpg)
+![トップページ](https://i.gyazo.com/c99e96e02e5c803c8586381ab9d792cf.jpg)
 ___________
 ## アプリ概要
 ___________
