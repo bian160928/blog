@@ -1,6 +1,6 @@
 # 韻strumental
 
-![トップページ](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![トップページ](https://media.giphy.com/media/vFKqnCdLPNOKc/instrumental.gif)
 ![トップページ](https://i.gyazo.com/c99e96e02e5c803c8586381ab9d792cf.jpg)
 ___________
 ## アプリ概要
