@@ -6,7 +6,7 @@
 
 ### 楽曲詳細ページ
 ![詳細ページ](https://i.gyazo.com/b681f5a2722e4ce0d4425ca2398054bb.jpg)
-![詳細ページ](https://i.gyazo.com/b95a7a929452ac6b97151dbb365367cb.jpg)
+![詳細ページ](https://i.gyazo.com/f4533e15858b35bc3b13d935127d86a1.jpg)
 
 ### ユーザーマイページ
 ![マイページ](https://i.gyazo.com/2e966e7d2670ec68089c6c565fb30392.jpg)
