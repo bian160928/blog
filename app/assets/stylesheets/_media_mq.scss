@@ -1,4 +1,4 @@
-$breakpoint: 420px;
+$breakpoint: 750px;
 @mixin mq {
   @media screen and (max-width: $breakpoint) {
     @content;

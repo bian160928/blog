@@ -1,6 +1,6 @@
-$breakpoint: 1650px;
+$breakpoint: 1080px;
 @mixin mq {
-  @media screen and (max-width: $breakpoint) {
+  @media screen and (min-width: $breakpoint) {
     @content;
   }
 }
@@ -123,7 +123,7 @@ $breakpoint: 1650px;
           margin-right: 8px;
           top: 130px;
           left: 8px;
-          width: calc(100%-230px);
+          width: 220px;
           word-break: break-all
         }
         .click-theme {
